@@ -25,12 +25,12 @@ The whole application has a major layer named **core** which responsabilities ar
 - widgets
 
 ## Domain
-
+## Entities
 ## Infra
-
+## Presenters
 ## UI
 
-## Entities
+
 
 ## Use Cases
 Use Cases are responsible to contain application and business validation for a specific request/flow.
