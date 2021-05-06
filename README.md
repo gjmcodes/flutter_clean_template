@@ -1,3 +1,7 @@
+
+[![Clean Flutter Architecture](https://i.imgur.com/2GVYRyg.png)](https://github.com/gjmcodes/flutter_clean_template)
+
+
 # Clean Architecture
 The main purpose of this template is to bring my own view and implementation on top of the Clean Architecture written by Bob Martin. The final goal is to have the project working with fully isolated layers, internationalization (**i18ln**), returning validations from the domain back to the UI, and features implemented in a folder structure which will make it easy to turn into modules in the future.
 
@@ -9,7 +13,7 @@ Each feature will replicate the same folder structure which consists of:
 
 The whole application has a major layer named **core** which responsabilities are to declare abstract objects, shared and common implementations from *base classes* to common widgets.
 
-[![Folder Structure](https://i.imgur.com/hN1JTvC.png)](https://github.com/gjmcodes/flutter_clean_template)
+[![Clean Architecture Folder Structure](https://i.imgur.com/hN1JTvC.png)](https://github.com/gjmcodes/flutter_clean_template)
 
 
 
@@ -38,7 +42,7 @@ For Use Cases implementation I decided to use 4 different objects to deal with t
 - **Use Case Handler**: A class which will work as the orchestrator of the use case. It's responsability is to call any required entity from the domain model and return to it's caller whether the Use Case Model sent is valid or not.
 - **Use Case Response**: Another DTO which will be returned to the Use Case Handler caller with information that tells whether the data sent was valid or not.
 
-[![Folder Structure](https://i.imgur.com/hN1JTvC.png)](https://i.imgur.com/29gWhQv.png)
+[![Clean Use Case Folder Structure](https://i.imgur.com/hN1JTvC.png)](https://i.imgur.com/29gWhQv.png)
 
  For this template we have the entity *"Resource"* and an **Use Case** implementation that holds logic and validation to add a new resource, therefore: **AddResourceUseCase**.
 
