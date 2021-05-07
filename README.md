@@ -56,8 +56,11 @@ The Use Case itself represents the DTO (*Data Transfer Object*) to send a reques
 For every Use Case we have a Handler on top of it. In this template we have a single Handler for context which implements all UseCases logic. This handler is **ResourceUseCaseHandler**.
 
 ## Validations
+*Work in Progress*
 
 ## Returning Validations to the Presentation Layer
+*Work in Progress*
 
 ## Internationalization
+*Work in Progress*
 
