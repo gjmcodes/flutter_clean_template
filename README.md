@@ -5,26 +5,32 @@
 # Clean Architecture
 The main purpose of this template is to bring my own view and implementation on top of the Clean Architecture written by Bob Martin. The final goal is to have the project working with fully isolated layers, internationalization (**i18ln**), returning validations from the domain back to the UI, and features implemented in a folder structure which will make it easy to turn into modules in the future.
 
-Each feature will replicate the same folder structure which consists of:
-- blocs
-- domain
-- infra
-- ui
 
-The whole application has a major layer named **core** which responsabilities are to declare abstract objects, shared and common implementations from *base classes* to common widgets.
+
+
 
 [![Clean Architecture Folder Structure](https://i.imgur.com/hN1JTvC.png)](https://github.com/gjmcodes/flutter_clean_template)
 
 
 
 ## Core
+The whole application has a major layer named **core** which responsabilities are to declare abstract objects, shared and common implementations from *base classes* to common widgets.
+
 - blocs
 - operations
 - use_cases
 - validations
 - widgets
 
+Each feature will replicate the same folder structure which consists of:
+- blocs
+- domain
+- infra
+- ui
+
 ## Domain
+The domain layer is responsible for holding business logic through entities and use cases. Therefore it's the layer responsible for telling how an application must work accordingly with it's business rules and known objects. This layer **must not** have any reference of objects that are related to other feature layers such as ui, infra nor blocs. It may declare abstract classes (or interfaces for those coming from TypeScript or C#) that will be implemented in any other layer. In other words, the Domain Layer **cannot depend** on any other layer apart from shared objects in the core that will help to compose the domain.
+
 ## Entities
 ## Infra
 ## Presenters
