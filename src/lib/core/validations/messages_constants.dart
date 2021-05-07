@@ -1,0 +1,1 @@
+const String REQUIRED_FIELD = 'Cannot be empty';

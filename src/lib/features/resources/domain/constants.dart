@@ -1,0 +1,1 @@
+const String RESOURCE_NAME_KEY = 'RESOURCE_NAME';
