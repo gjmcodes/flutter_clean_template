@@ -1,5 +1,5 @@
 
-[![Clean Flutter Architecture](https://i.imgur.com/Qe2FT1D.jpg)](https://github.com/gjmcodes/flutter_clean_template)
+[![Clean Flutter Architecture](https://i.imgur.com/boYyC3d.jpg)](https://github.com/gjmcodes/flutter_clean_template)
 
 
 # Clean Architecture
