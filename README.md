@@ -56,7 +56,12 @@ The Use Case itself represents the DTO (*Data Transfer Object*) to send a reques
 For every Use Case we have a Handler on top of it. In this template we have a single Handler for context which implements all UseCases logic. This handler is **ResourceUseCaseHandler**.
 
 ## Validations
-*Work in Progress*
+For validations we're using the **specifications** pattern which will be called by entities accordingly to exposed functions for specific flows/validations. A specification is composed by multiple business rules that can be reused by several specifications with different validation responsabilities.
+
+In our case we have the **new_resource.specification.dart** file which groups all business rules to validate whether a new resource can be created or not.
+
+[![Business Rules and Validations](https://i.imgur.com/jmq2snP.png)](https://github.com/gjmcodes/flutter_clean_template)
+
 
 ## Returning Validations to the Presentation Layer
 *Work in Progress*
