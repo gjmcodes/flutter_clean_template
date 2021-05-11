@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'features/resources/ui/blocs/resources.bloc.dart';
 import 'features/resources/ui/mobile/pages/resource_create.page.dart';
+import 'features/resources/ui/mobile/pages/resource_index.page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider<ResourcesBloc>(create: (_) => ResourcesBloc())
+  ], child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(body: ResourceCreate()),
+      home: ResourcesIndex(),
     );
   }
 }

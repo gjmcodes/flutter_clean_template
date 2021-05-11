@@ -11,8 +11,7 @@ class ValidationResult {
   bool isValid() => _validations == null || _validations.isEmpty;
 
   void _checkValidationsInstance() {
-    if (this._validations == null)
-      this._validations = Map<String, String>();
+    if (this._validations == null) this._validations = Map<String, String>();
   }
 
   void addValidation(String key, String value) {
@@ -20,6 +19,8 @@ class ValidationResult {
   }
 
   void addBusinessValidation(BusinessValidation validation) {
+    if (validation.errorKey == null) return;
+
     this._checkValidationsInstance();
     this.addValidation(validation.errorKey, validation.errorMsg);
   }
