@@ -65,7 +65,26 @@ In our case we have the **new_resource.specification.dart** file which groups al
 
 
 ## Returning Validations to the Presentation Layer
-*Work in Progress*
+To reveal a validation message for a field we must extend a BloC specific for forms that inherits *"BaseFormBloc"*. Once extending this class, its implementation will required an override of the function *"setValidations()"*
+
+[![Returning Validations](https://i.imgur.com/duFd9MI.png)](https://github.com/gjmcodes/flutter_clean_template)
+
+In the Resources example above we can see we're providing a value for a Map of the type *Map<String, StreamController<String>>*. The key to this Map is the located in the constants file at the root of our feature domain folder.
+ 
+ [![Domain Constants](https://i.imgur.com/VJJbSh3.png)](https://github.com/gjmcodes/flutter_clean_template)
+
+This same Key is also used as the Key to return our Business Validation mentioned in the previous topic.
+
+[![Domain Constants](https://i.imgur.com/erlaNUv.png)](https://github.com/gjmcodes/flutter_clean_template)
+
+Both Map and validations will know each other through their common keys. At the implementation of our BaseFormBloc we can call the function *addValidations* in case a Validation Result returns invalid from an Use Case Handler.
+
+[![Domain Constants](https://i.imgur.com/erlaNUv.png)](https://github.com/gjmcodes/flutter_clean_template)
+
+Once triggered, the stream will send the message to our *FormTextInput* which *must* be listening to streams defined to our BaseFormBloc implementations streams.
+
+[![Domain Constants](https://i.imgur.com/Sg4FCj5.png)](https://github.com/gjmcodes/flutter_clean_template)
+
 
 ## Internationalization
 *Work in Progress*
